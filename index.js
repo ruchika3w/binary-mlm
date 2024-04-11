@@ -17,6 +17,7 @@ app.use(cors({
 ))
 app.use(cookieParser())
 app.use('/api/auth' , authRoutes)
+app.get("/", (req, res) => res.send("Express on Vercel"));
 
 mongoose.connect('mongodb://127.0.0.1:27017/authentication')
 app.listen(process.env.PORT , ()=>{
